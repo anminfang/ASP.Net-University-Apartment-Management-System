@@ -1,0 +1,60 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="KASMasterPage.master.cs" Inherits="KASMasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>
+        <asp:ContentPlaceHolder ID="Title" runat="server">
+
+        </asp:ContentPlaceHolder>
+    </title>
+
+    <asp:ContentPlaceHolder ID="Stylesheets" runat="server">
+         <link href="styles.css" rel="stylesheet" type="text/css"/>
+         <link href="tables.css" rel="stylesheet" type="text/css" />
+         <script src="JavaScript.js" type="text/javascript"></script>
+    </asp:ContentPlaceHolder>
+
+    <asp:ContentPlaceHolder id="head" runat="server">
+
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <header>
+            <h1>KAScade Housing Systems</h1>
+            <img src="Image/kascade003.png" alt="logo" style="float: left; width: 200px; height: 100px" />
+            <div id="menu">
+                <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" ForeColor="red" Height="30%" Width="80%" Font-Size="Large" Font-Strikeout="False" Font-Underline="True" StaticHoverStyle-BackColor="#edede3" DynamicMenuItemStyle-HorizontalPadding="10px" DynamicMenuItemStyle-VerticalPadding="5px">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/HomePage.aspx" Text="Home" Value="Home"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/SearchPage.aspx" Text="Search" Value="Search"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/ApplicationPage.aspx" Text="Application" Value="Application"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/FeaturesPage.aspx" Text="Features" Value="Features"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/ContactPage.aspx" Text="Contact us" Value="Contact us"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/ReviewsPage.aspx" Text="Reviews" Value="Reviews"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/AdministrationPage.aspx" Text="Administration" Value="Administration"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/SignInPage.aspx" Text="Sign In/Sign Up" Value="Sign In/Sign Up"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/UserInfoPage.aspx" Text="User Info" Value="User Info"></asp:MenuItem>
+                    </Items>
+                </asp:Menu>
+
+                <asp:Label ID="Label1" runat="server" Text="Label" Visible=False ForeColor="#FF3F3F" Font-Size="Medium"></asp:Label>
+
+            </div>
+            
+            <h2>Life, elevated...</h2>
+        </header>
+    <div id="content">
+        <asp:ContentPlaceHolder id="ContentBody" runat="server">
+             
+        </asp:ContentPlaceHolder>
+    </div>
+
+    <footer>
+        KAScade Housing Systems &deg;&deg; Developed by Kholood AlGhasra - Anmin Fang - Swathi Kumar &copy; kascade@kascadeSystems.com &deg;&deg; May 2018
+    </footer>
+    </form>
+</body>
+</html>
